@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Flask app",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "flask",
+      "args": ["--app", "app", "run", "--debug", "--no-reload"],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
