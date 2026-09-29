@@ -1,27 +1,706 @@
-<!DOCTYPE html>
-<html lang="en"></html>
-<head>
-     <title>AI CV Builder</title>
-     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-     <h1>AI CV Builder</h1>
-     <label for="name">Name:</label>
-     <input type="text" id="name" name="name"><br><br>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2f5f2" />
+    <title>Folio | CV and cover letter studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="landing-shell">
+      <header class="site-header">
+        <div class="container nav-wrap">
+          <a class="brand" href="/" aria-label="Folio home">
+            <span class="brand-mark" aria-hidden="true">f</span>
+            <span>folio<span class="brand-period">.</span></span>
+          </a>
 
-<IabeI>Skills</IabeI><br>
-<textarea></textarea><br><br>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#templates">Templates</a>
+            <a href="#studio">Studio</a>
+            <a href="#reviews">Reviews</a>
+          </nav>
 
-IabbeI>Experience</IabbeI><br>
-<textarea></textarea><br><br>
+          <div class="header-actions">
+            <a class="button button-primary header-cta" href="#studio"
+              >Start now</a
+            >
+          </div>
+        </div>
+      </header>
 
-IabeI>Education</IabeI><br>
-<textarea></textarea><br><br>
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div class="hero-copy">
+              <span class="eyebrow eyebrow-strong">AI-powered CV studio</span>
+              <h1>Build a CV that gets interviews.</h1>
+              <p class="lead">
+                Turn your experience into polished, tailored applications for
+                the jobs you want. Create a standout CV or cover letter in
+                minutes, not hours.
+              </p>
 
-<button>
-Generate Cover Letter
-</button>
+              <div class="cta-row">
+                <a class="button button-primary" href="#studio">Create my CV</a>
+                <a class="button button-secondary" href="#templates"
+                  >Explore templates</a
+                >
+              </div>
 
+              <ul class="trust-points" aria-label="Key benefits">
+                <li>ATS-friendly layouts</li>
+                <li>AI writing support</li>
+                <li>Customised to your role</li>
+              </ul>
+            </div>
 
-</body>
+            <div class="hero-visual" aria-label="CV preview mockup">
+              <div class="cv-card">
+                <div class="cv-header">
+                  <div>
+                    <span class="mini-tag">Senior Designer</span>
+                    <h2>Jordan Lee</h2>
+                  </div>
+                  <span class="availability">Open to work</span>
+                </div>
+
+                <div class="cv-body">
+                  <div class="profile-block">
+                    <p class="label">Profile</p>
+                    <p>
+                      Product designer focused on accessible user experiences,
+                      rapid prototyping, and meaningful research.
+                    </p>
+                  </div>
+
+                  <div class="mini-grid">
+                    <div>
+                      <p class="label">Skills</p>
+                      <ul>
+                        <li>Figma</li>
+                        <li>Research</li>
+                        <li>UX Strategy</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p class="label">Experience</p>
+                      <ul>
+                        <li>Northstar Studio</li>
+                        <li>4 years</li>
+                        <li>Product design</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="logo-strip">
+          <div
+            class="container logo-row"
+            aria-label="Designed for every career move"
+          >
+            <span>First role</span>
+            <span>Career change</span>
+            <span>Next promotion</span>
+            <span>Return to work</span>
+            <span>Freelance</span>
+          </div>
+        </section>
+
+        <section id="features" class="section">
+          <div class="container">
+            <div class="section-heading">
+              <span class="eyebrow">Why people choose Folio</span>
+              <h2>Everything you need to present your experience clearly.</h2>
+            </div>
+
+            <div class="feature-grid">
+              <article class="feature-card">
+                <div class="icon-wrap">AI</div>
+                <h3>AI-crafted drafts</h3>
+                <p>
+                  Generate cover letters and CVs tailored to your target role
+                  using the details you already know.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <div class="icon-wrap">AT</div>
+                <h3>ATS-friendly structure</h3>
+                <p>
+                  Keep your wording clear, clean, and recruiter-friendly without
+                  sacrificing personality.
+                </p>
+              </article>
+
+              <article class="feature-card">
+                <div class="icon-wrap">Ex</div>
+                <h3>Copy and export</h3>
+                <p>
+                  Review the draft, copy it to your clipboard, or download it to
+                  reuse across applications.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="templates" class="section section-soft">
+          <div class="container">
+            <div class="section-heading">
+              <span class="eyebrow">Templates</span>
+              <h2>
+                Professional layouts designed to feel confident and modern.
+              </h2>
+            </div>
+
+            <div class="template-grid">
+              <article class="template-card template-one">
+                <div class="template-preview">
+                  <div class="resume-sheet">
+                    <span class="resume-kicker">Product designer</span>
+                    <strong>Jordan Lee</strong>
+                    <i class="resume-rule"></i>
+                    <span class="resume-section-title">Profile</span>
+                    <i></i><i></i><i class="short-line"></i>
+                    <span class="resume-section-title">Experience</span>
+                    <i></i><i></i><i></i><i class="short-line"></i>
+                  </div>
+                  <span class="template-pill">Minimal</span>
+                </div>
+                <h3>Clean executive</h3>
+              </article>
+
+              <article class="template-card template-two">
+                <div class="template-preview">
+                  <div class="resume-sheet resume-sheet-sidebar">
+                    <div class="resume-side"></div>
+                    <div class="resume-main">
+                      <span class="resume-kicker">Creative direction</span>
+                      <strong>Jordan Lee</strong>
+                      <i class="resume-rule"></i>
+                      <span class="resume-section-title">Selected work</span>
+                      <i></i><i></i><i class="short-line"></i>
+                      <span class="resume-section-title">Experience</span>
+                      <i></i><i></i><i></i>
+                    </div>
+                  </div>
+                  <span class="template-pill">Creative</span>
+                </div>
+                <h3>Brand-forward</h3>
+              </article>
+
+              <article class="template-card template-three">
+                <div class="template-preview">
+                  <div class="resume-sheet resume-sheet-classic">
+                    <span class="resume-kicker">Curriculum vitae</span>
+                    <strong>Jordan Lee</strong>
+                    <i class="resume-rule"></i>
+                    <span class="resume-section-title"
+                      >Professional summary</span
+                    >
+                    <i></i><i></i><i></i>
+                    <span class="resume-section-title">Work history</span>
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                  <span class="template-pill">Classic</span>
+                </div>
+                <h3>Traditional &amp; strong</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container workflow-wrap">
+            <div class="section-heading narrow">
+              <span class="eyebrow">How it works</span>
+              <h2>From profile to polished draft in three easy steps.</h2>
+            </div>
+
+            <div class="workflow-grid">
+              <div class="step-card">
+                <span>01</span>
+                <h3>Add your details</h3>
+                <p>Drop in your role, skills, experience, and education.</p>
+              </div>
+              <div class="step-card">
+                <span>02</span>
+                <h3>Choose your document</h3>
+                <p>Generate either a CV or a tailored cover letter.</p>
+              </div>
+              <div class="step-card">
+                <span>03</span>
+                <h3>Review and export</h3>
+                <p>
+                  Copy, refine, or download the final text before you apply.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="studio" class="section studio-section">
+          <div class="container studio-wrap">
+            <div class="section-heading studio-heading">
+              <span class="eyebrow">Build your draft</span>
+              <h2>
+                Start with your profile and generate a professional first pass.
+              </h2>
+            </div>
+
+            <div class="workspace">
+              <section class="profile-panel" aria-labelledby="profile-title">
+                <div class="panel-heading">
+                  <div>
+                    <p class="eyebrow">START WITH THE DETAILS</p>
+                    <h2 id="profile-title">Your profile</h2>
+                  </div>
+                  <button class="text-button" id="example-button" type="button">
+                    Load example
+                  </button>
+                </div>
+
+                <form id="profile-form">
+                  <div class="field-row">
+                    <div class="field">
+                      <label for="name"
+                        >Full name <span class="required-mark">*</span></label
+                      >
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        autocomplete="name"
+                        placeholder="e.g. Jordan Lee"
+                        maxlength="120"
+                        required
+                      />
+                    </div>
+                    <div class="field">
+                      <label for="role"
+                        >Target role <span class="required-mark">*</span></label
+                      >
+                      <input
+                        id="role"
+                        name="role"
+                        type="text"
+                        placeholder="e.g. Product designer"
+                        maxlength="160"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label for="skills"
+                      >Skills <span class="required-mark">*</span></label
+                    >
+                    <textarea
+                      id="skills"
+                      name="skills"
+                      rows="3"
+                      maxlength="1200"
+                      placeholder="Tools, strengths, and areas of expertise"
+                      required
+                    ></textarea>
+                    <span class="field-hint"
+                      >Separate skills with commas or short phrases.</span
+                    >
+                  </div>
+
+                  <div class="field">
+                    <label for="experience">Experience</label>
+                    <textarea
+                      id="experience"
+                      name="experience"
+                      rows="4"
+                      maxlength="3000"
+                      placeholder="Roles, responsibilities, and results you can support with examples"
+                    ></textarea>
+                  </div>
+
+                  <div class="field">
+                    <label for="education">Education</label>
+                    <textarea
+                      id="education"
+                      name="education"
+                      rows="3"
+                      maxlength="1200"
+                      placeholder="Degree, school, training, or relevant coursework"
+                    ></textarea>
+                    <span class="field-hint"
+                      >Add experience or education to give the draft useful
+                      context.</span
+                    >
+                  </div>
+
+                  <p
+                    class="form-message"
+                    id="form-message"
+                    role="alert"
+                    hidden
+                  ></p>
+                  <div class="generate-actions">
+                    <button
+                      class="button button-primary"
+                      type="submit"
+                      name="document_type"
+                      value="cover_letter"
+                    >
+                      <span>Draft cover letter</span>
+                      <span class="button-arrow" aria-hidden="true"
+                        >&#8599;</span
+                      >
+                    </button>
+                    <button
+                      class="button button-secondary"
+                      type="submit"
+                      name="document_type"
+                      value="cv"
+                    >
+                      <span>Build CV</span>
+                      <span class="button-arrow" aria-hidden="true"
+                        >&#8599;</span
+                      >
+                    </button>
+                  </div>
+                  <p class="privacy-note">
+                    Your details are sent to the configured AI provider only
+                    when you generate. This demo does not save them.
+                  </p>
+                </form>
+              </section>
+
+              <section class="output-panel" aria-labelledby="output-title">
+                <div class="output-heading">
+                  <div>
+                    <p class="eyebrow">THE FIRST DRAFT</p>
+                    <h2 id="output-title">Your document</h2>
+                  </div>
+                  <div class="output-actions" id="output-actions" hidden>
+                    <button
+                      class="icon-button"
+                      id="copy-button"
+                      type="button"
+                      title="Copy draft"
+                    >
+                      Copy
+                    </button>
+                    <button
+                      class="icon-button"
+                      id="download-button"
+                      type="button"
+                      title="Download draft"
+                    >
+                      Download
+                    </button>
+                    <button
+                      class="icon-button"
+                      id="download-pdf-button"
+                      type="button"
+                      title="Download a print-ready PDF"
+                    >
+                      Download PDF
+                    </button>
+                  </div>
+                </div>
+
+                <div
+                  class="document-stage"
+                  id="document-stage"
+                  aria-live="polite"
+                  aria-busy="false"
+                >
+                  <div class="empty-state" id="empty-state">
+                    <div class="paper-mark" aria-hidden="true">
+                      <span>Aa</span><i></i><i></i><i></i>
+                    </div>
+                    <h3>Room for a strong first draft.</h3>
+                    <p>
+                      Fill in your profile, then choose a CV or cover letter to
+                      shape your experience for the role.
+                    </p>
+                  </div>
+                  <pre class="document-output" id="output" hidden></pre>
+                </div>
+                <p
+                  class="output-status"
+                  id="output-status"
+                  role="status"
+                  aria-live="polite"
+                ></p>
+                {% if not ai_configured %}
+                <aside class="setup-note">
+                  <span class="setup-indicator" aria-hidden="true">i</span>
+                  <p>
+                    Add an <code>OPENAI_API_KEY</code> to your local environment
+                    to enable AI drafting.
+                  </p>
+                </aside>
+                {% endif %}
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" class="section section-soft">
+          <div class="container">
+            <div class="section-heading">
+              <span class="eyebrow">Made with care</span>
+              <h2>A more thoughtful way to shape your next application.</h2>
+            </div>
+
+            <div class="testimonial-grid">
+              <article class="testimonial-card">
+                <span class="principle-number">01</span>
+                <h3>Your experience leads</h3>
+                <p>
+                  Start with your own skills, work, and education. Folio helps
+                  organize them into a clear first draft.
+                </p>
+                <div>
+                  <span>Grounded in your details</span>
+                </div>
+              </article>
+
+              <article class="testimonial-card">
+                <span class="principle-number">02</span>
+                <h3>AI is a starting point</h3>
+                <p>
+                  Generated content is yours to review and refine. Keep what
+                  sounds like you; change what does not.
+                </p>
+                <div>
+                  <span>Always yours to edit</span>
+                </div>
+              </article>
+
+              <article class="testimonial-card">
+                <span class="principle-number">03</span>
+                <h3>Made for real applications</h3>
+                <p>
+                  Build a CV or cover letter for a specific role, then copy or
+                  download the draft for your next step.
+                </p>
+                <div>
+                  <span>Clear, practical output</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section cta-section">
+          <div class="container cta-banner">
+            <div>
+              <span class="eyebrow">Ready to start?</span>
+              <h2>Build a first draft worth sending.</h2>
+            </div>
+            <a class="button button-primary" href="#studio"
+              >Create my profile</a
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-row">
+          <span>FOLIO / PERSONAL APPLICATION TOOLS</span>
+          <span>Draft with care. Keep it true.</span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+    <script>
+      const form = document.querySelector('#profile-form');
+      const formMessage = document.querySelector('#form-message');
+      const output = document.querySelector('#output');
+      const outputActions = document.querySelector('#output-actions');
+      const outputStatus = document.querySelector('#output-status');
+      const documentStage = document.querySelector('#document-stage');
+      let currentDocumentType = 'cover_letter';
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        formMessage.hidden = true;
+
+        const formData = new FormData(form);
+        const experience = formData.get('experience').trim();
+        const education = formData.get('education').trim();
+        if (!experience && !education) {
+          formMessage.textContent =
+            'Add some experience or education before generating.';
+          formMessage.hidden = false;
+          document.querySelector('#experience').focus();
+          return;
+        }
+
+        const submitter = event.submitter;
+        const documentType = submitter?.value || 'cover_letter';
+        const originalLabel = submitter?.querySelector('span')?.textContent;
+        currentDocumentType = documentType;
+        documentStage.setAttribute('aria-busy', 'true');
+        outputStatus.textContent =
+          documentType === 'cv'
+            ? 'Building your CV...'
+            : 'Drafting your cover letter...';
+
+        for (const button of form.querySelectorAll('button[type="submit"]')) {
+          button.disabled = true;
+          button.classList.toggle('is-loading', button === submitter);
+        }
+
+        if (submitter?.querySelector('span'))
+          submitter.querySelector('span').textContent = 'Working...';
+
+        try {
+          const response = await fetch('/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: formData.get('name'),
+              role: formData.get('role'),
+              skills: formData.get('skills'),
+              experience,
+              education,
+              document_type: documentType,
+            }),
+          });
+          const result = await response.json();
+          if (!response.ok)
+            throw new Error(
+              result.error ||
+                'The draft could not be generated. Please try again.',
+            );
+
+          output.textContent = result.document;
+          output.hidden = false;
+          document.querySelector('#empty-state').hidden = true;
+          outputActions.hidden = false;
+          document.querySelector('#output-title').textContent =
+            documentType === 'cv' ? 'CV draft' : 'Cover letter';
+          outputStatus.textContent =
+            'Draft ready. Review every detail before using it.';
+        } catch (error) {
+          outputStatus.textContent = error.message;
+        } finally {
+          documentStage.setAttribute('aria-busy', 'false');
+          for (const button of form.querySelectorAll('button[type="submit"]')) {
+            button.disabled = false;
+            button.classList.remove('is-loading');
+          }
+          if (submitter?.querySelector('span'))
+            submitter.querySelector('span').textContent = originalLabel;
+        }
+      });
+
+      document
+        .querySelector('#example-button')
+        .addEventListener('click', () => {
+          document.querySelector('#name').value = 'Jordan Lee';
+          document.querySelector('#role').value = 'Junior Product Designer';
+          document.querySelector('#skills').value =
+            'Figma, prototyping, user research, accessibility, HTML and CSS';
+          document.querySelector('#experience').value =
+            'Design intern at Northstar Studio. Supported a redesign of the client onboarding flow, created wireframes, and organized feedback from 8 user interviews.';
+          document.querySelector('#education').value =
+            'B.A. in Interaction Design, Lakeside College, 2024';
+          formMessage.hidden = true;
+          document.querySelector('#name').focus();
+        });
+
+      document
+        .querySelector('#copy-button')
+        .addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(output.textContent);
+            outputStatus.textContent = 'Draft copied to clipboard.';
+          } catch {
+            outputStatus.textContent =
+              'Clipboard access is unavailable in this browser.';
+          }
+        });
+
+      document
+        .querySelector('#download-button')
+        .addEventListener('click', () => {
+          const blob = new Blob([output.textContent], {
+            type: 'text/plain;charset=utf-8',
+          });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download =
+            currentDocumentType === 'cv'
+              ? 'cv-draft.txt'
+              : 'cover-letter-draft.txt';
+          link.click();
+          URL.revokeObjectURL(url);
+          outputStatus.textContent = 'Draft downloaded.';
+        });
+
+      document
+        .querySelector('#download-pdf-button')
+        .addEventListener('click', () => {
+          const JsPDF = window.jspdf?.jsPDF;
+          if (!JsPDF) {
+            outputStatus.textContent =
+              'PDF export is unavailable. Check your connection and try again.';
+            return;
+          }
+
+          const pdf = new JsPDF({ unit: 'pt', format: 'a4' });
+          const margin = 52;
+          const pageWidth = pdf.internal.pageSize.getWidth();
+          const pageHeight = pdf.internal.pageSize.getHeight();
+          const lineHeight = 17;
+          const lines = pdf.splitTextToSize(
+            output.textContent,
+            pageWidth - margin * 2,
+          );
+          let cursorY = margin;
+
+          pdf.setFont('helvetica', 'normal');
+          pdf.setFontSize(11);
+          pdf.setTextColor(27, 45, 38);
+
+          for (const line of lines) {
+            if (cursorY + lineHeight > pageHeight - margin) {
+              pdf.addPage();
+              cursorY = margin;
+            }
+            pdf.text(line, margin, cursorY);
+            cursorY += lineHeight;
+          }
+
+          const name = document
+            .querySelector('#name')
+            .value.trim()
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-|-$/g, '');
+          const documentName =
+            currentDocumentType === 'cv' ? 'cv' : 'cover-letter';
+          pdf.save(`${name || 'folio'}-${documentName}.pdf`);
+          outputStatus.textContent = 'PDF downloaded.';
+        });
+    </script>
+  </body>
 </html>
